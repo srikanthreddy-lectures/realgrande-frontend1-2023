@@ -28,7 +28,8 @@ const Login = () => {
             console.log(localStorage.getItem('name'));           
             localStorage.setItem('loginfailed',false);
             //check if it is realtor or customer and navigate appropriately
-            (data.role == 'realtor') ? navigate('/inquiries') : navigate('/');
+            // (data.role == 'realtor') ? navigate('/inquiries') : navigate('/');
+            (data.role == 'realtor') ? navigate('/inquiries') : navigate('/',{state:{'pass':data.pass}});
             }
             else {
               localStorage.clear();         
