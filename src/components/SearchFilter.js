@@ -10,8 +10,8 @@ const SearchFilter = ({houses}) => {
     let myhouses = houses;
     let counties = Array.from(new Set(myhouses.map((elem) => elem.county)));
     counties.unshift("-");
-    console.log('houses',houses.length,houses);
-    console.log('counties',counties.length,counties);
+    //console.log('houses',houses.length,houses);
+   // console.log('counties',counties.length,counties);
     let navigate = useNavigate();
 
     let changeHandler = (e) => {

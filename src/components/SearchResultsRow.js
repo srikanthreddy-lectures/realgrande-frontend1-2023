@@ -10,7 +10,7 @@ const SearchResultsRow = ({house}) => {
     }
 
     return ( 
-        <tr onClick={onClickHandler}>
+        <tr onClick={onClickHandler} key={house._id}>
             <td>{house.address}</td>
             <td>$ {house.price}</td>
         </tr>
