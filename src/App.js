@@ -19,7 +19,7 @@ function App() {
 
   let [allHouses,setAllHouses] = useState([]);
 
-
+  // console.log(process.env.REACT_APP_LINKTOBACKEND);
   /*
   getting data from local json file
   */
@@ -39,11 +39,10 @@ function App() {
 useEffect( ()=>{
   async function getHousesInfo(){
       try {
-        const response = await axios.get('http://localhost:3002/');
-        //console.log('called and waiting');
-       // console.log(response);
+        // const response = await axios.get('http://localhost:3002/');
+        const response = await axios.get(process.env.REACT_APP_LINKTOBACKEND);
         let data = await response.data;
-        console.log(data);
+        //console.log(data);
         setAllHouses(data);
       } catch (error) {
         console.error(error);

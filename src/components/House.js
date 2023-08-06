@@ -1,9 +1,19 @@
+import { useLocation } from "react-router-dom";
+
+
 const House = (props) => {
+
+    let location = useLocation();
+
     console.log(props.houses);
     const myhouses = props.houses;
     if (props.houses.length === 0) {
         return <p>Loading...</p>;
       }
+      //checking to read state sent from navigate useing useloca
+     if (location.state) 
+        console.log("from location "+ location.state.pass);
+
     return (      
         <div>
             <div className="row">
