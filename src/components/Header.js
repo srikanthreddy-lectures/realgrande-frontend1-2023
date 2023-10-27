@@ -22,7 +22,7 @@ const Header = () => {
                <Link to="/"> <img className="img-thumbnail w-50" src='logo.png'  alt="logo here" /> </Link>
             </div>
             <div className="col-sm-7 mt-4">
-                <h3> Making world a better place..Houses to Homes</h3>
+                <h3> Making world a better place..Houses to Ghar's</h3>
             </div>
             <div className="col-sm-3 mt-3 pb-3">     
             { 
